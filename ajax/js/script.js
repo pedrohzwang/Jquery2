@@ -1,14 +1,14 @@
-
-
+let show = true;
 $(function () {
-    //$("#conteudo").text("texto alterado com jquery");
+    $("#act").click(function(){
+        if(show){
+            $("#conteudo").load("./arquivos/arquivo.txt", function (data) {
+                console.log(data);
+                !show;
+                console.log(show);
+            });
+        }
+        console.log(show);
+    });
 });
 
-/*$.get("https://pt.wikipedia.org/wiki/Jogo_da_velha", function(msg){
-    alert(msg);
-});*/
-
-
-$("#act").click(function () {
-    $("#conteudo").load("arquivo.txt", function (responseTxt) {
-    }});
