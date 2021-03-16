@@ -40,4 +40,13 @@ $(function() {
             verificarFimDeJogo();
         }
     });
+    let mostrar = true;
+    $("#mostrar").click(function(){
+        if(mostrar = true){
+            $("#conteudo").load("./arquivo/arquivo.txt");
+            mostrar = false;
+        } else {
+            $("#conteudo").html("");
+        }
+    });
 });
